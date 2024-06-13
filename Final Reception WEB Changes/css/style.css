@@ -120,7 +120,7 @@ main section #trains-section {
 	margin-bottom: 2px;
 }
 
-#earls-court-trains .westbound div .timings, #west-kensington-trains .westbound div .timings{
+#earls-court-trains .westbound div .timings, #west-kensington-trains .westbound1 div .timings{
 	background-color: #002a3a;
 	display: flex;
 	flex-direction: row;
@@ -392,7 +392,8 @@ footer {
 	font-size: 1.16rem;
 	font-family: Roboto, sans-serif;
 	color: white;
-	height: auto;
+	height: 28rem;
+	overflow: hidden;
 }
 
 
