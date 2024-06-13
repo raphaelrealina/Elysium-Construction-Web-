@@ -291,35 +291,38 @@ async function currencies() {
 function worldClock() {
 	var today = new Date();
 	
-	var date = today.toLocaleDateString('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
 	var londonTime = today.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Europe/London' })
 	var tiranaTime = today.toLocaleTimeString('en-AL', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Europe/Tirane' })
 	var newYorkTime = today.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'America/New_York'})
-	var tokyoTime = today.toLocaleTimeString('en-JP', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Asia/Tokyo'})
-	var sydneyTime = today.toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Australia/Sydney'})
-
-	document.getElementById('date').getElementsByClassName('today')[0].innerHTML = date
+	
 	document.getElementById('london').getElementsByClassName('city-time')[0].innerHTML = londonTime
 	document.getElementById('tirana').getElementsByClassName('city-time')[0].innerHTML = tiranaTime
 	document.getElementById('new-york').getElementsByClassName('city-time')[0].innerHTML = newYorkTime
-	document.getElementById('tokyo').getElementsByClassName('city-time')[0].innerHTML = tokyoTime
-	document.getElementById('sydney').getElementsByClassName('city-time')[0].innerHTML = sydneyTime
-
+	
 	//update flag images
-	document.getElementById('date').getElementsByClassName('date-img')[0].src = "img/cal.svg";
 	document.getElementById('london').getElementsByClassName('city-flag')[0].src = "img/gb.svg";
 	document.getElementById('tirana').getElementsByClassName('city-flag')[0].src = "img/al.svg";
 	document.getElementById('new-york').getElementsByClassName('city-flag')[0].src = "img/us.svg";
-	document.getElementById('tokyo').getElementsByClassName('city-flag')[0].src = "img/jp.svg";
-	document.getElementById('sydney').getElementsByClassName('city-flag')[0].src = "img/au.svg";
 
 	
 	var t = setTimeout(worldClock, 1000)
 
 } 
 
+function calendar() {
+	document.addEventListener('DOMContentLoaded', function() {
+		var calendarEl = document.getElementById('cal');
+	
+		var calendar = new FullCalendar.Calendar(calendarEl, {
+			plugins: [ 'dayGrid' ]
+		});
+	
+		calendar.render();
+	});
+}
 
 
+calendar() 
 worldClock()
 
 

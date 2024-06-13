@@ -12,6 +12,7 @@ body {
 
 html {
 	font-size: 100%;
+	overflow: hidden;
 }
 
 .red {
@@ -321,7 +322,9 @@ footer {
 
 /* ---------------------------------------------------------------------------------------------------------- */
 
-/* WORLD CLOCK ---------------------------------------------------------------------------------------------------------- */
+/* CLOCK-CALENDAR ---------------------------------------------------------------------------------------------------------- */
+
+
 
 .worldClock {
 	width: 20vw;
@@ -331,7 +334,7 @@ footer {
 	flex-shrink: 1;
 }
 
-.clock h1{
+.clock-calendar h1{
 	display: flex;
 	font-size: 1.8rem;
 	font-family: Roboto, sans-serif;
@@ -341,7 +344,7 @@ footer {
 	padding-top: 1.5rem;
 }
 
-#sydney, #tokyo, #new-york, #london, #tirana, #date{
+#new-york, #london, #tirana{
 	display: flex;
 	flex-direction: row;
 	justify-content: start;
@@ -377,6 +380,21 @@ footer {
 	align-items: center;
 	margin-left: auto;
 }
+
+/* calendar -`--------------------------------- */
+:root {
+	
+	--fc-today-bg-color: rgba(255, 219, 40, 0.438);
+}
+
+#cal {
+	background-color: #002a3a;
+	font-size: 1.16rem;
+	font-family: Roboto, sans-serif;
+	color: white;
+	height: auto;
+}
+
 
 
 /* ---------------------------------------------------------------------------------------------------------- */

@@ -7,6 +7,18 @@
 	<link rel="stylesheet" href="./css/reset.css">
 	<link href="./css/style.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function() {
+		  var calendarEl = document.getElementById('cal');
+		  var calendar = new FullCalendar.Calendar(calendarEl, {
+			initialView: 'dayGridMonth'
+		  });
+		  calendar.render();
+		});
+  
+	  </script>
 
 </head>
 <body>
@@ -42,12 +54,8 @@
 			</div> 
 			
 		</section>
-		<div class="clock">
+		<div class="clock-calendar">
 			<h1>World Clock</h1>
-			<div id="date">
-				<img class="date-img" alt="img-date">
-				<div class="today"></div>
-			</div>
 			<div id="london">
 				<img class="city-flag" alt="gb-flag"> <!-- Flag image for London -->
 				<div class="city-name">London:</div>
@@ -63,15 +71,8 @@
 				<div class="city-name">New York:</div>
 				<div class="city-time"></div>
 			</div>
-			<div id="tokyo">
-				<img class="city-flag" alt="jp-flag"> <!-- Flag image for Tokyo -->
-				<div class="city-name">Tokyo:</div>
-				<div class="city-time"></div>
-			</div>
-			<div id="sydney">
-				<img class="city-flag" alt="au-flag"> <!-- Flag image for Sydney -->
-				<div class="city-name">Sydney:</div>
-				<div class="city-time"></div>
+			<div class="calendar" >
+				<div id='cal'></div>
 			</div>
 		</div>
 		<div class="financials-media">
