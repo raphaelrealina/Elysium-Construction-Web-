@@ -1,0 +1,536 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 1rem;
+	min-height: 100vh;
+
+	}
+
+html {
+	font-size: 100%;
+}
+
+.red {
+	color: rgba(255, 38, 38, 1)
+}
+
+.amber {
+	color: rgba(255, 146, 0, 1)
+}
+
+.green {
+	color: lightgreen;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 100vh;
+	align-items: start;
+
+}
+/* HEADER ---------------------------------------------------------------------------------------------------------- */
+header {
+	display:flex;
+	flex-direction: row;
+	background-color: #002a3a;
+	width: 100vw;
+	height: 22vh;
+	align-items: center;
+	padding: 2rem 2rem 2rem 3rem;
+	justify-content: space-between;
+}
+
+header #head-logo {
+	width: 20rem;
+	height: 7rem;
+}
+
+header #weather-io {
+	width: 50vw;
+}
+
+/* MAIN ---------------------------------------------------------------------------------------------------------- */
+
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 1920px;
+	background-image: url('../img/LTengbk.svg');
+	background-repeat: none;
+	background-size: cover;
+	height: 78vh;
+}
+
+/* TRAINS ---------------------------------------------------------------------------------------------------------- */
+
+
+main section #trains-section {
+	display: flex;
+	flex-direction: column;
+	width: 	36vw;
+	min-height: 78vh;
+}
+
+#earls-court-trains, #west-kensington-trains {
+	font-family: Arial, sans-serif;
+	position: relative;
+	background-color: none;
+	min-height: 35vh;
+}
+
+#earls-court-trains > h2, #west-kensington-trains > h2 {
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-size: 1.3rem;
+	padding: 1rem 0 .5rem 0;
+}
+
+#earls-court-trains .eastbound div, #west-kensington-trains .eastbound1 div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between; 
+	font-size: 1.16rem;
+	min-height: 100%;
+}
+
+#earls-court-trains .westbound div, #west-kensington-trains .westbound1 div{
+	display: flex;
+	align-items: center;
+	justify-content: space-between; 
+	font-size: 1.16rem;
+	min-height: 100%;
+}
+#earls-court-trains .eastbound div .timings, #west-kensington-trains .eastbound1 div .timings {
+	background-color: #002a3a;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	padding: 2px .775rem 0rem 0.775rem;
+	min-height: 2.825rem;
+	margin-bottom: 2px;
+}
+
+#earls-court-trains .westbound div .timings, #west-kensington-trains .westbound div .timings{
+	background-color: #002a3a;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	padding: 2px .775rem 0rem 0.775rem;
+	min-height: 2.825rem;
+	margin-bottom: 2px;
+}
+
+ #earls-court-trains .destinationname, #west-kensington-trains .destinationname{
+	color: white;
+	text-align: left;
+	width: 100%;
+
+}
+
+ #earls-court-trains .destinationname h2, #west-kensington-trains .destinationname h2{
+	font-size: 1.25rem;
+	padding-top: 0rem;
+	line-height: 1rem;
+	justify-content: center;
+}
+
+
+
+
+#earls-court-trains .expectedarrival, #west-kensington-trains .expectedarrival {
+	color: white;
+	padding: .25rem;
+	padding-left: 0rem;
+	min-width: 5.5rem;
+	margin-right: .125rem;
+}
+
+#earls-court-trains .timetostation, #west-kensington-trains .timetostation {
+	background-color: #002a3a;
+	color: lightgreen;
+	padding: 0.25rem;
+	min-width: 6.5rem;
+	align-content: last;
+	padding-left: .45rem;
+	padding-right: .15rem;
+}
+
+#earls-court-trains .traindirection, #west-kensington-trains .traindirection {
+	color: white;	
+	background-color: #002a3a;
+	color: lightgreen;
+	padding: 0.25rem;
+	min-width:4.5rem;
+	align-content: last;
+	padding-left: .45rem;
+	padding-right: .65rem;
+}
+
+#earls-court-trains .platform, #west-kensington-trains .platform { 
+	color: white;	
+	background-color: #002a3a;
+	color: lightgreen;
+	padding: 0.25rem;
+	min-width:4.5rem;
+	align-content: last;
+	padding-left: 1.1rem;
+	padding-right: .35rem;
+}
+
+#earls-court-trains .currentlocation, #west-kensington-trains .currentlocation {
+	padding-top: .25rem;
+	width: 100%;
+	
+}
+
+#earls-court-trains .currentlocation h3, #west-kensington-trains .currentlocation h3 {
+	font-size: 1.1rem;
+	width: 100%;
+	line-height: 2rem;
+}
+
+section {
+	min-width: 36vw;
+	padding: 1.4rem 2rem 0 3rem;
+}
+
+section h1{
+	font-size: 1.8rem;
+	font-family: Roboto, sans-serif;
+	font-weight: Bold;
+	color: rgb(255, 199, 44);
+	margin-bottom: .85rem;
+}
+
+.locations {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: rgb(0, 42, 58);
+	min-height: 2.825rem;
+	justify-content: center;
+}
+
+.displaysnip {
+	display: block;
+}
+
+.hidesnip {
+	display: none;
+
+}
+
+ .train2, .train3, .train4 {
+	position: absolute;
+	top: 0;
+	background-color: none;
+	 width: 100%;
+	z-index: 2; 
+	height: 100%;
+} 
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+
+
+/* NEWS SCROLL ---------------------------------------------------------------------------------------------------------- */
+
+#main-container {
+	display: flex;
+	flex-direction: row;
+	min-height: 4.6rem;
+	background-color: #002a3a;
+	width: 1920px;
+	position: fixed;
+	bottom: 0;
+	overflow:hidden;
+}
+
+#ticker-head {
+	z-index: 5;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;	
+	color: white;
+	font-family: Roboto, sans-serif;
+	font-size: 1.6rem;
+	font-weight: bold;
+	letter-spacing: 2px;
+	min-width: 220px;
+	background-color: #C32526;
+}
+
+#ticker-container {
+	display: flex;
+
+
+}
+
+.ticker-move {
+	display: flex;
+
+}
+.ticker-item {
+	display: flex; 
+	flex-shrink: 0;
+	color: white;
+	font-family: Roboto, sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+	letter-spacing: 2px;	
+	padding-top: 26px;
+	min-width: 0;
+	flex-wrap: nowrap;
+	/* margin-left: -200%; */
+
+}
+
+.ticker-item .ticker-source {
+	display: flex;
+	font-size: 1.2rem;
+	font-weight: 200;
+	min-width: 55px;
+}
+
+@keyframes ticker {
+  0% { transform: translate3d(0%, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+.ticker-item-ani { animation: ticker linear 125s infinite; }
+
+footer {
+	display: flex;
+	width: 100vw;
+	flex-direction: column;
+	position: absolute;
+	bottom: 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+/* WORLD CLOCK ---------------------------------------------------------------------------------------------------------- */
+
+.worldClock {
+	width: 20vw;
+	
+	flex-basis:20vw;
+	flex-grow:1;
+	flex-shrink: 1;
+}
+
+.clock h1{
+	display: flex;
+	font-size: 1.8rem;
+	font-family: Roboto, sans-serif;
+	font-weight: Bold;
+	color: rgb(255, 199, 44);
+	margin-bottom: .85rem;
+	padding-top: 1.5rem;
+}
+
+#sydney, #tokyo, #new-york, #london, #tirana, #date{
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	padding: 0rem .775rem 0rem 0rem;
+	min-height: 2.825rem;
+	min-width: 7rem;
+	margin-bottom: 2px;
+	background-color: #002a3a;
+	font-family: Roboto, sans-serif;
+	font-size: 1.16rem;
+	color: white;
+	width: 20vw;
+}
+
+.city-flag, .date-img {
+    width: 50px;
+    height: 30px;
+    margin-right: 0rem; /* Ensure this is minimal */
+    display: inline-block; /* Ensure flags are inline with text */
+    vertical-align: middle; /* Aligns flag with the middle of the text */
+}
+
+.city-name {
+	display:inline-flex;
+	align-items: center;
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+}
+
+.city-time, .today {
+	display: inline-flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+
+/* FINANCIALS-MEDIA ---------------------------------------------------------------------------------------------------------- */
+
+.financials-media {
+	display: flex;
+	flex-direction: column;
+	padding: 1.5rem;
+	align-items: center;
+}
+
+/* financials --------------------------------- */
+
+#financials {
+	background-color: none;
+	min-width: 100%;
+}
+
+#financials h1 {
+	font-size: 1.8rem;
+	font-family: Roboto, sans-serif;
+	font-weight: Bold;
+	color: rgb(255, 199, 44);
+	margin-bottom: .85rem;
+	display: block;
+	min-width: 100%;
+}
+
+#financials h3{
+margin-right: 0.7rem;
+color: white;
+font-weight: normal;
+font-size: 1rem;
+margin-left: 0.2rem;
+	
+}	
+
+/* cuurrency --------------------------------- */
+
+.currency1 > div {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	padding-top: 0.5rem;
+	gap: 1rem;
+	
+
+}
+
+.currency2  > div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	padding-top: 0.5rem;
+	gap: 1rem;
+
+
+}
+
+.currency3 > div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	padding-top: 0.5rem;
+	gap: 1rem;
+
+}
+
+.currency1, .currency2, .currency3 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0rem .775rem 0rem 0rem;
+	min-height: 2.825rem;
+	margin-bottom: 2px;
+	min-width: 100%;
+	background-color: #002a3a;
+	font-family: Roboto, sans-serif;
+	color: white;
+
+}
+
+.currency1, .currency2, .currency3, .eur {
+	display: flex;
+	flex-direction: row;
+	
+}
+
+ .currency1, .currency2, .currency3, .gbp {
+	display: flex;
+	flex-direction: row;
+}
+
+ .currency1, .currency2, .currency3, .usd {
+	display: flex;
+	flex-direction: row;
+}
+
+ .currency1, .currency2, .currency3, .flag {
+	display: flex;
+	align-items: center;
+	
+}
+
+ .currency1, .currency2, .currency3, .flag .indicators {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0.75rem;
+}
+
+ .currency1, .currency2, .currency3, .flag .indicators div {
+	display: flex;
+	min-width: 100%;
+}
+
+ .currency1, .currency2, .currency3, .flag .indicators .cp {
+	font-size: 1rem;
+}
+
+ .currency1, .currency2, .currency3, .flag .indicators .ch {
+	font-size: 0.75rem;
+} 
+
+/* ---------------------------------------- */
+
+
+/* media --------------------------------- */
+.media {
+	padding: 1.5rem 1.5rem 1.5rem 0rem;
+}
+
+#myvideo {
+	width: 750px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+section #trains-section, .clock, .financials-media {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+
+

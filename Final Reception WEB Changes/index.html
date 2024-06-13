@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Elysium Reception</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link href="./css/style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+	<header id="unmuted">
+		<img id="head-logo" src="./img/HDLogo.png" alt="Elysium Logo">
+		<div id="weather-io">
+			<a class="weatherwidget-io" href="https://forecast7.com/en/51d51n0d13/london/" data-label_1="LONDON" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="original" data-basecolor="#002a3a" data-highcolor="#ffffff">LONDON WEATHER</a>
+		</div>
+	</header>
+	<main>
+		<section id="trains-section">
+		<h1>Earls Court Station</h1>
+			<div id="earls-court-trains">
+				<div class="train1 displaysnip">
+				<div class="eastbound">
+				</div>
+				</div>
+				<div class="train2 hidesnip">
+				<div class="westbound">					
+				</div>
+				</div>
+			</div> 
+		<h1>West Kensington Station</h1>
+			<div id="west-kensington-trains">
+				<div class="train3 displaysnip">
+				<div class="eastbound1">
+				</div>
+				</div>
+				<div class="train4 hidesnip">
+				<div class="westbound1">					
+				</div>
+				</div>
+			</div> 
+			
+		</section>
+		<div class="clock">
+			<h1>World Clock</h1>
+			<div id="date">
+				<img class="date-img" alt="img-date">
+				<div class="today"></div>
+			</div>
+			<div id="london">
+				<img class="city-flag" alt="gb-flag"> <!-- Flag image for London -->
+				<div class="city-name">London:</div>
+				<div class="city-time"></div>
+			</div>
+			<div id="tirana">
+				<img class="city-flag" alt="au-flag"> <!-- Flag image for Sydney -->
+				<div class="city-name">Tirana:</div>
+				<div class="city-time"></div>
+			</div>
+			<div id="new-york">
+				<img class="city-flag" alt="us-flag"> <!-- Flag image for New York -->
+				<div class="city-name">New York:</div>
+				<div class="city-time"></div>
+			</div>
+			<div id="tokyo">
+				<img class="city-flag" alt="jp-flag"> <!-- Flag image for Tokyo -->
+				<div class="city-name">Tokyo:</div>
+				<div class="city-time"></div>
+			</div>
+			<div id="sydney">
+				<img class="city-flag" alt="au-flag"> <!-- Flag image for Sydney -->
+				<div class="city-name">Sydney:</div>
+				<div class="city-time"></div>
+			</div>
+		</div>
+		<div class="financials-media">
+			<div id="financials">
+				<h1>Currencies</h1>
+				<div class="currency1">
+					<div>
+					<h3>EUR</h3>
+						<div class="eur">		
+						</div>
+					</div>		
+				</div>
+				<div class="currency2">
+				<div>
+				<h3>GBP</h3>
+						<div class="gbp">
+						</div>
+				</div>
+				</div>
+				<div class="currency3">
+		<div>
+		<h3>USD</h3>
+						<div class="usd">		
+						</div>
+				</div>
+				</div>
+				</div>
+			<div class="media" >
+				<video id="myvideo" autoplay muted>
+					<source src="./videos/v1.mp4" id="mp4source" type="video/mp4">
+				<source src="movie.ogg" type="video/ogg">
+				Your browser does not support the video tag.
+				</video>
+			</div>
+		</div> 
+		<footer>
+			<div id="main-container">
+				<div id="ticker-head">Latest News</div>
+				<div id="ticker-container">
+					<div class="ticker-move">
+					</div>
+				</div>
+			</div>
+		</footer> 
+	</main>
+	<script src="./js/app.js"></script>
+</body>
+</html>
