@@ -322,19 +322,18 @@ footer {
 
 /* ---------------------------------------------------------------------------------------------------------- */
 
-/* CLOCK-CALENDAR ---------------------------------------------------------------------------------------------------------- */
+/* CLOCK-CALENDAR-FINANCIALS ---------------------------------------------------------------------------------------------------------- */
 
 
 
 .worldClock {
 	width: 20vw;
-	
 	flex-basis:20vw;
 	flex-grow:1;
 	flex-shrink: 1;
 }
 
-.clock-calendar h1{
+.clock-calendar-financials h1{
 	display: flex;
 	font-size: 1.8rem;
 	font-family: Roboto, sans-serif;
@@ -392,21 +391,15 @@ footer {
 	font-size: 1.16rem;
 	font-family: Roboto, sans-serif;
 	color: white;
-	height: 28rem;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+	margin-bottom: 0rem
 }
 
 
-
-/* ---------------------------------------------------------------------------------------------------------- */
-
-
-/* FINANCIALS-MEDIA ---------------------------------------------------------------------------------------------------------- */
-
-.financials-media {
-	display: flex;
-	flex-direction: column;
-	padding: 1.5rem;
-	align-items: center;
+.clock-calendar-financials {
+	width: 20vw;
 }
 
 /* financials --------------------------------- */
@@ -414,17 +407,9 @@ footer {
 #financials {
 	background-color: none;
 	min-width: 100%;
+	padding-top: 0.5rem;
 }
 
-#financials h1 {
-	font-size: 1.8rem;
-	font-family: Roboto, sans-serif;
-	font-weight: Bold;
-	color: rgb(255, 199, 44);
-	margin-bottom: .85rem;
-	display: block;
-	min-width: 100%;
-}
 
 #financials h3{
 margin-right: 0.7rem;
@@ -443,8 +428,6 @@ margin-left: 0.2rem;
 	align-items: center;
 	justify-content: space-around;
 	padding-top: 0.5rem;
-	gap: 1rem;
-	
 
 }
 
@@ -454,7 +437,6 @@ margin-left: 0.2rem;
 	align-items: center;
 	justify-content: space-around;
 	padding-top: 0.5rem;
-	gap: 1rem;
 
 
 }
@@ -465,7 +447,6 @@ margin-left: 0.2rem;
 	align-items: center;
 	justify-content: space-around;
 	padding-top: 0.5rem;
-	gap: 1rem;
 
 }
 
@@ -528,9 +509,27 @@ margin-left: 0.2rem;
 /* ---------------------------------------- */
 
 
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+
+/* MEDIA ---------------------------------------------------------------------------------------------------------- */
+
+.media {
+	display: flex;
+	flex-direction: column;
+	padding: 1.5rem;
+	margin-top: 2rem;
+	align-items: center;
+}
+
+
+
+
 /* media --------------------------------- */
 .media {
-	padding: 1.5rem 1.5rem 1.5rem 0rem;
+	padding: 2rem 1.5rem 1.5rem 0.5rem;
 }
 
 #myvideo {

@@ -28,6 +28,7 @@
 	const gbpdv = document.querySelector(".gbp")
 	const usddv = document.querySelector(".usd")
 	const newstickerdv = document.querySelector('.ticker-move')
+	const eudv = document.querySelector('.euNews-container')
 
 	unmuted.addEventListener('click', function() {
 		myvideo.muted = false
@@ -144,7 +145,7 @@ async function trainid(station, key, platformA, platformB) {
 }
 	
 async function currencies() {
-		const response = await fetch("https://fcsapi.com/api-v3/forex/latest?symbol=GBP/EUR,GBP/USD,GBP/ALL,GBP/JPY,USD/GBP,USD/EUR,USD/ALL,USD/JPY,EUR/GBP,EUR/USD,EUR/ALL,EUR/JPY&access_key=CEWUMUqWTNsY6kYZ4B4Gzbsr")
+		const response = await fetch("https://fcsapi.com/api-v3/forex/latest?symbol=GBP/EUR,GBP/USD,GBP/ALL,USD/GBP,USD/EUR,USD/ALL,EUR/GBP,EUR/USD,EUR/ALL&access_key=CEWUMUqWTNsY6kYZ4B4Gzbsr")
 		const data = await response.json()
 		const dataunwrap = data.response
 		const sortunwrap = dataunwrap.sort((a, b) => (a.s > b.s) ? 1 : -1)
@@ -248,9 +249,6 @@ async function currencies() {
 
 	createVideoList().then(videos => console.log(videos)).catch(error => console.error('Error fetching video list:', error));
 
-
-
-
 	var player = document.getElementById('myvideo');
 	var mp4Vid = document.getElementById('mp4source');
 
@@ -261,11 +259,43 @@ async function currencies() {
 		player.load();
 		player.play();
 }
-	
+
+async function euNews() {
+	const response = await fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=795dc4a86c6340d5a3a3f3675214cb1c");
+	const data = await response.json();
+	const articles = data.articles; // Assuming the API returns an object with an 'articles' array
+
+	// Find the euNews-container
+	const newsContainer = document.querySelector('.euNews-container');
+
+	// Clear previous news articles
+	newsContainer.innerHTML = '';
+
+	// Loop through articles and display them
+	articles.forEach(article => {
+		// Create a div for each article
+		const articleDiv = document.createElement('div');
+		articleDiv.className = 'article';
+
+		// Create and append the headline (title) to the article div
+		const headline = document.createElement('h2');
+		headline.textContent = article.title;
+		articleDiv.appendChild(headline);
+
+		// Append the article div to the euNews-container
+		newsContainer.appendChild(articleDiv);
+	});
+    
+
+}
+
+
+
 	const earlsKey = "https://api.tfl.gov.uk/Line/Piccadilly/Arrivals/940GZZLUECT?direction=all&api_key=3b3cc88192f14ae08640d3b15e4b5ffb"
 	const westKey = "https://api.tfl.gov.uk/Line/district/Arrivals/940GZZLUWKN?direction=all&api_key=3b3cc88192f14ae08640d3b15e4b5ffb"
 
 	newsfeed()
+	euNews()
 	trainid("earlsCourt", earlsKey, "5", "6")
 	trainid("WestKen", westKey, "1", "2")
 	currencies()

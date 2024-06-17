@@ -13,7 +13,8 @@
 		document.addEventListener('DOMContentLoaded', function() {
 		  var calendarEl = document.getElementById('cal');
 		  var calendar = new FullCalendar.Calendar(calendarEl, {
-			initialView: 'dayGridMonth'
+			initialView: 'dayGridMonth',
+			headerToolbar: false,
 		  });
 		  calendar.render();
 		});
@@ -54,8 +55,8 @@
 			</div> 
 			
 		</section>
-		<div class="clock-calendar">
-			<h1>World Clock</h1>
+		<div class="clock-calendar-financials">
+			<h1>Calendar</h1>
 			<div id="london">
 				<img class="city-flag" alt="gb-flag"> <!-- Flag image for London -->
 				<div class="city-name">London:</div>
@@ -74,10 +75,8 @@
 			<div class="calendar" >
 				<div id='cal'></div>
 			</div>
-		</div>
-		<div class="financials-media">
 			<div id="financials">
-				<h1>Currencies</h1>
+
 				<div class="currency1">
 					<div>
 					<h3>EUR</h3>
@@ -100,12 +99,19 @@
 				</div>
 				</div>
 				</div>
+		</div>
+		<div class="media-euNews">
 			<div class="media" >
 				<video id="myvideo" autoplay muted>
 					<source src="./videos/v1.mp4" id="mp4source" type="video/mp4">
 				<source src="movie.ogg" type="video/ogg">
 				Your browser does not support the video tag.
 				</video>
+			</div>
+			<div class="euNews">
+				<h1>EU News</h1>
+				<div class="euNews-container">
+				</div>
 			</div>
 		</div> 
 		<footer>
