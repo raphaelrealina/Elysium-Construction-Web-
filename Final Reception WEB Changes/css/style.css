@@ -329,10 +329,7 @@ footer {
 
 .worldClock {
 	width: 20vw;
-	
-	flex-basis:20vw;
-	flex-grow:1;
-	flex-shrink: 1;
+
 }
 
 .clock-calendar h1{
@@ -393,7 +390,16 @@ footer {
 	font-size: 1.16rem;
 	font-family: Roboto, sans-serif;
 	color: white;
-	height: 50vh;
+	height: 26.8rem;
+	overflow: hidden;
+}
+
+.fc-daygrid-day {
+	height: 55px ; /* Adjust based on your preference */
+  }
+
+.fc-header-toolbar {
+	margin-bottom: 0;
 }
 
 
@@ -521,15 +527,17 @@ footer {
 
 
 
+
 /* FINANCIALS-MEDIA ---------------------------------------------------------------------------------------------------------- */
 
 /* media --------------------------------- */
 .media {
-	padding: 1.5rem 1.5rem 1.5rem 0rem;
+	padding: 0;
+	align-items: left;
 }
 
 #myvideo {
-	width: 750px;
+	width: 760px;
 	height: auto;
 	margin: 0;
 	padding: 0;
