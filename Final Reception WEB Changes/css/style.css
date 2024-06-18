@@ -12,7 +12,8 @@ body {
 
 html {
 	font-size: 100%;
-	overflow: hidden;
+	overflow:hidden;
+	
 }
 
 .red {
@@ -392,7 +393,7 @@ footer {
 	font-size: 1.16rem;
 	font-family: Roboto, sans-serif;
 	color: white;
-	height: 28rem;
+	height: 50vh;
 }
 
 
@@ -409,11 +410,14 @@ footer {
 	align-items: center;
 }
 
+
 /* financials --------------------------------- */
 
 #financials {
 	background-color: none;
 	min-width: 100%;
+	justify-content: flex;
+	
 }
 
 #financials h1 {
@@ -424,21 +428,26 @@ footer {
 	margin-bottom: .85rem;
 	display: block;
 	min-width: 100%;
+	margin-left: 0;
+	
 }
 
 #financials h3{
-margin-right: 0.7rem;
-color: white;
-font-weight: normal;
-font-size: 1rem;
-margin-left: 0.2rem;
-	
-}	
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	padding: 0rem .775rem 0rem 0rem;
+	margin-bottom: 2px;
+	background-color: #002a3a;
+	font-family: Roboto, sans-serif;
+	font-size: 1.16rem;
+	color: white;
+} 
 
 /* cuurrency --------------------------------- */
-
-.currency1 > div {
-	display: inline-flex;
+.currency1 > div, .currency2 > div, .currency3 > div {
+	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
@@ -448,33 +457,13 @@ margin-left: 0.2rem;
 
 }
 
-.currency2  > div {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-	padding-top: 0.5rem;
-	gap: 1rem;
-
-
-}
-
-.currency3 > div {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-	padding-top: 0.5rem;
-	gap: 1rem;
-
-}
 
 .currency1, .currency2, .currency3 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0rem .775rem 0rem 0rem;
+	padding: 0rem .775rem 0rem 0.775rem;
 	min-height: 2.825rem;
 	margin-bottom: 2px;
 	min-width: 100%;
@@ -488,6 +477,7 @@ margin-left: 0.2rem;
 	display: flex;
 	flex-direction: row;
 	
+	
 }
 
  .currency1, .currency2, .currency3, .gbp {
@@ -498,11 +488,15 @@ margin-left: 0.2rem;
  .currency1, .currency2, .currency3, .usd {
 	display: flex;
 	flex-direction: row;
+	margin-right: 0.5rem;
 }
 
  .currency1, .currency2, .currency3, .flag {
 	display: flex;
 	align-items: center;
+	justify-content: space-around;
+	padding: 0rem 2rem 0.2rem 2rem;
+	
 	
 }
 
@@ -525,8 +519,9 @@ margin-left: 0.2rem;
 	font-size: 0.75rem;
 } 
 
-/* ---------------------------------------- */
 
+
+/* FINANCIALS-MEDIA ---------------------------------------------------------------------------------------------------------- */
 
 /* media --------------------------------- */
 .media {

@@ -164,20 +164,20 @@ async function currencies() {
 		const currencyeurhtml = currencyeur.map((curr) =>
 
 			`
-	<div class="flag"><img src="./img/${chooseflag(curr.pair)}.svg" width="40" alt="European Flag"><div class="indicators"><div class="cp">${curr.price}</div><div class="ch ${changepriceindicator(curr.change)}">${curr.change}</div></div></div>`
+	<div class="flag"><img src="./img/${chooseflag(curr.pair)}.svg" width="40" alt="European Flag"><div class="indicators"><div class="cp">${parseFloat(curr.price).toFixed(2)}</div><div class="ch ${changepriceindicator(curr.change)}">${curr.change}</div></div></div>`
 		)
 
 		const currencygbphtml = currencygpb.map((curr) =>
 
 			`
-	<div class="flag"><img src="./img/${chooseflag(curr.pair)}.svg" width="40" alt="European Flag"><div class="indicators"><div class="cp">${curr.price}</div><div class="ch ${changepriceindicator(curr.change)}">${curr.change}</div></div></div>`
+	<div class="flag"><img src="./img/${chooseflag(curr.pair)}.svg" width="40" alt="European Flag"><div class="indicators"><div class="cp">${parseFloat(curr.price).toFixed(2)}</div><div class="ch ${changepriceindicator(curr.change)}">${curr.change}</div></div></div>`
 
 		)
 
 		const currencyusdhtml = currencyusd.map((curr) =>
 
 			`
-	<div class="flag"><img src="./img/${chooseflag(curr.pair)}.svg" width="40" alt="European Flag"><div class="indicators"><div class="cp">${curr.price}</div><div class="ch ${changepriceindicator(curr.change)}">${curr.change}</div></div></div>`
+	<div class="flag"><img src="./img/${chooseflag(curr.pair)}.svg" width="40" alt="European Flag"><div class="indicators"><div class="cp">${parseFloat(curr.price).toFixed(2)}</div><div class="ch ${changepriceindicator(curr.change)}">${curr.change}</div></div></div>`
 		)
 
 		eurdv.innerHTML = currencyeurhtml.join("")
@@ -291,9 +291,9 @@ async function currencies() {
 function worldClock() {
 	var today = new Date();
 	
-	var londonTime = today.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Europe/London' })
-	var tiranaTime = today.toLocaleTimeString('en-AL', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Europe/Tirane' })
-	var newYorkTime = today.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'America/New_York'})
+	var londonTime = today.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Europe/London', hourCycle: 'h23'})
+	var tiranaTime = today.toLocaleTimeString('en-AL', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Europe/Tirane', hourCycle: 'h23'})
+	var newYorkTime = today.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'America/New_York', hourCycle: 'h23'})
 	
 	document.getElementById('london').getElementsByClassName('city-time')[0].innerHTML = londonTime
 	document.getElementById('tirana').getElementsByClassName('city-time')[0].innerHTML = tiranaTime
